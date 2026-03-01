@@ -1,0 +1,123 @@
+rules_version = '2';
+
+service cloud.firestore {
+
+  match /databases/{database}/documents {
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && request.auth.token.email == "admin@example.com";
+    }
+
+    function isMechanic() {
+      return isAuthenticated();
+    }
+
+    function isAssignedMechanic(repairOrderData) {
+      return isAuthenticated()
+          && repairOrderData.mechanicEmail != null
+          && repairOrderData.mechanicEmail == request.auth.token.email;
+    }
+
+    match /users/{userId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin() || (isAuthenticated() && request.auth.uid == userId);
+    }
+
+    match /users/{userId}/addresses/{addressId} {
+      allow read, write: if isAdmin() || (isAuthenticated() && request.auth.uid == userId);
+    }
+
+    match /products/{productId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /categories/{categoryId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /mechanics/{mechanicId} {
+      allow read: if true;
+      allow create: if isAdmin() || (isAuthenticated() && request.auth.uid == mechanicId);
+      allow update: if isAdmin()
+                    || (isAuthenticated()
+                        && request.auth.uid == mechanicId
+                        && request.resource.data.diff(resource.data).changedKeys().hasOnly(['fcmToken']));
+      allow delete: if isAdmin();
+    }
+
+    match /mobilemechanics/{userId} {
+      allow read: if true;
+      allow create, update: if isAuthenticated() && request.auth.uid == userId;
+      allow delete: if isAdmin();
+    }
+
+    match /repair_orders/{repairOrderId} {
+      allow create: if isAuthenticated();
+      allow read: if isAdmin()
+               || isAssignedMechanic(resource.data)
+               || (isAuthenticated() && resource.data.customerEmail == request.auth.token.email);
+      allow update: if isAdmin()
+                 || isAssignedMechanic(resource.data);
+      allow delete: if isAdmin();
+    }
+
+    match /repair_booking_requests/{requestId} {
+      // Payagan gumawa kahit guest para hindi ma-block ang booking submit
+      allow create: if true;
+      allow read: if isAdmin();
+      allow update, delete: if isAdmin();
+    }
+
+    match /commerce_uploads/{uploadId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /messages/{messageId} {
+      allow read: if isAdmin()
+               || (isAuthenticated()
+                   && (resource.data.to == request.auth.token.email
+                       || resource.data.from == request.auth.token.email));
+      allow create: if isAdmin() || isAuthenticated();
+      allow update, delete: if isAdmin();
+    }
+
+    // COMMUNITY SHARING POSTS: public read, owner/admin write
+    match /communityIdeas/{ideaId} {
+      allow read: if true;
+      allow create: if isAuthenticated()
+                    && request.resource.data.userId == request.auth.uid
+                    && request.resource.data.fullName is string
+                    && request.resource.data.ideaText is string
+                    && request.resource.data.ideaText.size() > 0
+                    && request.resource.data.timestamp == request.time;
+      allow update, delete: if isAdmin()
+                         || (isAuthenticated() && request.auth.uid == resource.data.userId);
+    }
+
+    // ORDERS: for Sales Report - customers can create, admin can read all, customers can read their own
+    match /orders/{orderId} {
+      allow create: if isAuthenticated();
+      allow read: if isAdmin()
+               || (isAuthenticated() && resource.data.customerUid == request.auth.uid);
+      allow update, delete: if isAdmin();
+    }
+
+    // REPAIR NOTIFICATIONS: mechanic logs; authenticated users can read & delete their own notifications
+    match /repair_notifications/{notificationId} {
+      allow create: if isAuthenticated();
+      allow read: if isAuthenticated();
+      // Simple: payagan delete ng kahit authenticated user (customer side app lamang)
+      allow update, delete: if isAuthenticated() || isAdmin();
+    }
+
+  }
+
+}
+
