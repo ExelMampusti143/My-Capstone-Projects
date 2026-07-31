@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="firebase_database_url" translatable="false">https://mampusti-b15ea-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">620076830883</string>
+    <string name="google_api_key" translatable="false">AIzaSyDFGSG2yr2xnm9t45W_6HeJbTvD4ZMmXwU</string>
+    <string name="google_app_id" translatable="false">1:620076830883:android:74679baf8349f5ddf7ef16</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDFGSG2yr2xnm9t45W_6HeJbTvD4ZMmXwU</string>
+    <string name="google_storage_bucket" translatable="false">mampusti-b15ea.firebasestorage.app</string>
+    <string name="project_id" translatable="false">mampusti-b15ea</string>
+</resources>
