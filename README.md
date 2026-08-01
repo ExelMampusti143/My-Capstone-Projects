@@ -1,35 +1,158 @@
 # ERZone Bicycle Store Mobile App
 
+## Overview
+
+ERZone Bicycle Store Mobile App is an Android-based mobile application developed as our capstone project. The system allows users to browse bicycles, customize bike components in a 3D environment, and experience Augmented Reality (AR) visualization before purchasing.
+
+The application aims to improve the online bicycle shopping experience by integrating 3D customization and AR technology into a mobile platform.
+
+---
+
+## Features
+
+- User Registration and Login
+- Browse Bicycle Products
+- Product Categories
+- Shopping Cart
+- Order Management
+- User Profile Management
+- 3D Bike Customization
+- Augmented Reality (AR) Bicycle Visualization
+- Firebase Database Integration
+- Responsive Android User Interface
+
+---
+
+## Technologies Used
+
+### Programming Language
+- Java
+
+### Mobile Development
+- Android Studio
+
+### Game Engine
+- Unity
+
+### Database
+- Firebase Realtime Database
+
+### Cloud Storage
+- Firebase Storage
+
+### Authentication
+- Firebase Authentication
+
+### Version Control
+- Git
+- GitHub
+
+---
+
+## Project Structure
+
+```
+ERZone_BicycleStore_MobileApp
+│
+├── app/
+├── unityLibraryBikeCustom/
+├── gradle/
+├── assets/
+├── build.gradle
+├── settings.gradle
+└── README.md
+```
+
+---
+
+## Screenshots
+
+You can place screenshots inside a folder named:
+
+```
+<img width="720" height="1640" alt="47d1fc8b-f439-45a9-8a83-12e432997099" src="https://github.com/user-attachments/assets/5f304ef5-1c48-49c3-9fb0-109cab03bcd2" />
+
+```
+
+Example:
+
+- Login Screen
+- Dashboard
+- Product List
+- Shopping Cart
+- 3D Bike Customization
+- AR Bicycle Preview
+
+---
+
+## Complete Project Download
+
+The complete Android Studio project, including the required APK files located inside the **assets** folder, is available through Google Drive.
+
+**Google Drive Link**
+
+(Insert your Google Drive link here.)
+
+---
+
 ## Important Note
 
-Due to GitHub's 100 MB file size limit, the complete project (including the APK files inside the `assets` folder) is not fully stored in this repository.
+GitHub has a maximum file size limit of 100 MB per file.
 
-The complete project can be downloaded from the Google Drive link below.
+Because of this limitation, the complete project package (including large APK files) is provided through Google Drive.
 
-## Complete Project
+---
 
-Google Drive:
-https://drive.google.com/file/d/1N-vvY5i9wlSixMSQH3y__EHM_pxhTib8/view?usp=sharing
+## Installation Guide
 
-## Setup Instructions
+### 1. Download
 
-1. Download the complete project from Google Drive.
-2. Open the project in Android Studio.
-3. Inside the project, go to:
+Download the complete project from the Google Drive link above.
 
-ERZone_BicycleStore_MobileApp\ERZone_BicycleStore_MobileApp\app\src\main\assets
+### 2. Extract
 
-4. Copy the following APK files to your Android phone:
+Extract the ZIP file.
+
+### 3. Open Project
+
+Open the project using Android Studio.
+
+### 4. Required APK Files
+
+Inside the project, navigate to:
+
+```
+assets/
+```
+
+You will find:
 
 - 3DBikeCustom.apk
 - AR Bicycle Mobile.apk
 
-5. Install both APK files on the Android device.
-6. Run the main application.
-7. The **Bike Customization** and **AR Preview** square buttons on the Dashboard will now work correctly because the required APK files are installed on the device.
+Copy these APK files to your Android device and install them.
 
-## Repository Contents
+### 5. Run the Application
 
-This GitHub repository contains the source code and documentation.
+Run the Android Studio project.
 
-The complete project package (including the APK files inside the `assets` folder) is available through Google Drive because GitHub does not allow files larger than 100 MB.
+Once both APK files are installed on the Android device, the following dashboard features will work correctly:
+
+- 3D Custom
+- AR Bike
+
+---
+
+## Developers
+
+Capstone Project
+
+Bachelor of Science in Information Technology
+
+Academic Year 2025–2026
+
+---
+
+## License
+
+This project is intended for educational and portfolio purposes only.
