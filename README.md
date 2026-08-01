@@ -1,60 +1,163 @@
-# ERZone Bicycle Store Mobile App
+# 🚲 ERZone Bicycle Store Mobile App
 
-## Overview
+An Android-based mobile application developed as a **Bachelor of Science in Information Technology Capstone Project (Academic Year 2025–2026)**.
 
-ERZone Bicycle Store Mobile App is an Android-based mobile application developed as our capstone project. The system allows users to browse bicycles, customize bike components in a 3D environment, and experience Augmented Reality (AR) visualization before purchasing.
-
-The application aims to improve the online bicycle shopping experience by integrating 3D customization and AR technology into a mobile platform.
+The application enhances the bicycle shopping experience by integrating **Artificial Intelligence (AI), 3D Bike Customization, and Augmented Reality (AR)** into a single mobile platform.
 
 ---
 
-## Features
+# 📖 Project Overview
 
-- User Registration and Login
-- Browse Bicycle Products
-- Product Categories
-- Shopping Cart
-- Order Management
-- User Profile Management
-- 3D Bike Customization
-- Augmented Reality (AR) Bicycle Visualization
-- Firebase Database Integration
-- Responsive Android User Interface
+ERZone Bicycle Store Mobile App is designed to provide users with an interactive and intelligent bicycle shopping experience.
+
+Users can browse bicycle products, customize bicycles in a 3D environment, visualize bicycles using Augmented Reality (AR), and utilize AI-powered bike part detection. The AI feature recognizes bicycle components through the device's camera and recommends compatible bicycle parts available within the application's product catalog.
+
+The project combines Android development, Unity, Firebase, Artificial Intelligence, and Augmented Reality technologies to improve customer engagement and product visualization.
 
 ---
 
-## Technologies Used
+# ✨ Features
 
-### Programming Language
+- 🔐 User Authentication
+- 🚲 Browse Bicycle Products
+- 📂 Product Categories
+- 🔍 Search Products
+- 🛒 Shopping Cart
+- 📦 Order Management
+- 👤 User Profile Management
+- 🤖 AI Bike Part Detection
+- 🎨 3D Bike Customization
+- 📱 Augmented Reality (AR) Bicycle Visualization
+- ☁ Firebase Database Integration
+- 🔥 Firebase Authentication
+- 📁 Firebase Storage Integration
+- 📲 Modern Android User Interface
+
+---
+
+# 🤖 AI Bike Part Detection
+
+One of the core features of the application is **AI Bike Part Detection**.
+
+Using the mobile device's camera, the application detects bicycle components such as:
+
+- Handlebar
+- Saddle
+- Wheels
+- Frame
+- Fork
+- Other bicycle parts
+
+Once a bicycle part is recognized, the application recommends compatible bicycle parts available within the application's shopping catalog, allowing users to quickly find replacement or upgrade components.
+
+---
+
+# 🎨 3D Bike Customization
+
+The application includes an interactive **3D Bike Customization** module developed using **Unity**.
+
+Users can:
+
+- Customize different bicycle parts
+- View modifications in real time
+- Preview the customized bicycle before purchasing
+
+---
+
+# 📱 Augmented Reality (AR)
+
+The application also provides an **Augmented Reality** feature.
+
+Users can visualize bicycles directly in their real-world environment using their mobile device's camera, helping them better understand the bicycle's appearance and size before purchasing.
+
+---
+
+# 🛠 Technologies Used
+
+## Mobile Development
 - Java
-
-### Mobile Development
 - Android Studio
 
-### Game Engine
+## Game Engine
 - Unity
 
-### Database
+## Artificial Intelligence
+- YOLOv5 Object Detection
+- Google Colab
+
+## Database
 - Firebase Realtime Database
 
-### Cloud Storage
+## Cloud Storage
 - Firebase Storage
+- Cloudinary
 
-### Authentication
+## Authentication
 - Firebase Authentication
 
-### Version Control
+## Version Control
 - Git
 - GitHub
 
 ---
 
-## Project Structure
+# 📸 Screenshots
+
+## Welcome Screen
+
+![Welcome](screenshots/welcome%20ui.jpg)
+
+---
+
+## Login Screen
+
+![Login](screenshots/login%20ui.jpg)
+
+---
+
+## Dashboard
+
+![Dashboard](screenshots/dashboard%20ui.jpg)
+
+---
+
+## Browse Products
+
+![Browse Products](screenshots/browse%20product.jpg)
+
+---
+
+## Shopping Cart
+
+![Shopping Cart](screenshots/shopping%20cart.jpg)
+
+---
+
+## AI Bike Part Detection
+
+![AI Bike Detection](screenshots/ai%20bike%20detection.jpg)
+
+---
+
+## 3D Bike Customization
+
+![3D Bike Customization](screenshots/3d%20bike%20customization.jpg)
+
+---
+
+## Augmented Reality (AR)
+
+![AR Bike](screenshots/ar%20bike.jpg)
+
+---
+
+# 📂 Project Structure
 
 ```
 ERZone_BicycleStore_MobileApp
 │
 ├── app/
+├── backend/
 ├── unityLibraryBikeCustom/
 ├── gradle/
 ├── assets/
@@ -65,93 +168,121 @@ ERZone_BicycleStore_MobileApp
 
 ---
 
-## Screenshots
+# 📥 Download Complete Project
 
-You can place screenshots inside a folder named:
+Due to GitHub's **100 MB file size limit**, the complete Android Studio project is provided through **Google Drive**.
 
-```
+📁 **Google Drive Download**
 
-```
-
-Example:
-
-- Login Screen
-- Dashboard
-- Product List
-- Shopping Cart
-- 3D Bike Customization
-- AR Bicycle Preview
+https://drive.google.com/file/d/1N-vvY5i9wlSixMSQH3y__EHM_pxhTib8/view?usp=sharing
 
 ---
 
-## Complete Project Download
+# ⚠ Important Note
 
-The complete Android Studio project, including the required APK files located inside the **assets** folder, is available through Google Drive.
+The complete Android Studio project contains large files, including APK files located inside the **assets** folder.
 
-**Google Drive Link**
+These files exceed GitHub's upload limit.
 
-(Insert your Google Drive link here.)
+Therefore, the entire project package is provided through Google Drive.
 
----
-
-## Important Note
-
-GitHub has a maximum file size limit of 100 MB per file.
-
-Because of this limitation, the complete project package (including large APK files) is provided through Google Drive.
+The GitHub repository contains the source code, documentation, and screenshots.
 
 ---
 
-## Installation Guide
+# 📱 Required APK Files
 
-### 1. Download
-
-Download the complete project from the Google Drive link above.
-
-### 2. Extract
-
-Extract the ZIP file.
-
-### 3. Open Project
-
-Open the project using Android Studio.
-
-### 4. Required APK Files
-
-Inside the project, navigate to:
+Inside the downloaded project, navigate to:
 
 ```
-assets/
+ERZone_BicycleStore_MobileApp\ERZone_BicycleStore_MobileApp\app\src\main\assets
 ```
 
-You will find:
+You will find the following APK files:
 
 - 3DBikeCustom.apk
 - AR Bicycle Mobile.apk
 
-Copy these APK files to your Android device and install them.
+These APK files are required for the application's **Bike Customization** and **AR Preview** features.
 
-### 5. Run the Application
+Copy the APK files to your Android device and install them before using these features.
+
+---
+
+# 🚀 Installation Guide
+
+### Step 1
+
+Download the complete project from the Google Drive link.
+
+---
+
+### Step 2
+
+Extract the ZIP file.
+
+---
+
+### Step 3
+
+Open the project using Android Studio.
+
+---
+
+### Step 4
+
+Navigate to:
+
+```
+ERZone_BicycleStore_MobileApp\ERZone_BicycleStore_MobileApp\app\src\main\assets
+```
+
+Copy the following APK files to your Android device:
+
+- 3DBikeCustom.apk
+- AR Bicycle Mobile.apk
+
+Install both APK files.
+
+---
+
+### Step 5
 
 Run the Android Studio project.
 
-Once both APK files are installed on the Android device, the following dashboard features will work correctly:
+Once the required APK files are installed, the following features will function correctly:
 
-- 3D Custom
-- AR Bike
+- 🤖 AI Bike Part Detection
+- 🎨 3D Bike Customization
+- 📱 Augmented Reality (AR)
 
 ---
 
-## Developers
+# 🎯 Future Improvements
+
+- Online payment integration
+- Push notifications
+- Product reviews and ratings
+- Inventory analytics dashboard
+- AI recommendation improvements
+- Additional AR interactions
+- Performance optimization
+- Multi-language support
+
+---
+
+# 👨‍💻 Developers
+
+**Bachelor of Science in Information Technology**
 
 Capstone Project
 
-Bachelor of Science in Information Technology
-
-Academic Year 2025–2026
+Academic Year **2025–2026**
 
 ---
 
-## License
+# 📄 License
 
-This project is intended for educational and portfolio purposes only.
+This project is intended for **educational and portfolio purposes only**.
+
+Unauthorized commercial use, reproduction, or redistribution of this project without permission from the developers is prohibited.
