@@ -70,7 +70,6 @@ ERZone_BicycleStore_MobileApp
 You can place screenshots inside a folder named:
 
 ```
-<img width="720" height="1640" alt="47d1fc8b-f439-45a9-8a83-12e432997099" src="https://github.com/user-attachments/assets/5f304ef5-1c48-49c3-9fb0-109cab03bcd2" />
 
 ```
 
